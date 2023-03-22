@@ -2,7 +2,7 @@
 // Schneider Arthur
 declare(strict_types = 1);
 
-class Person
+final class Person
 {
     private string $lastName;
     private string $firstName;

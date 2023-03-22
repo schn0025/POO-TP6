@@ -2,7 +2,7 @@
 // Schneider Arthur
 declare(strict_types = 1);
 
-class Date{
+final class Date{
     private int $day;
     private int $month;
     private int $year;
@@ -25,7 +25,7 @@ class Date{
      * @return string chaine de charactaire a afficher
      */
     public function __toString():string{
-        return $this->day .'/'. $this->month .'/'. $this->year."\n";
+        return $this->day .'/'. $this->month .'/'. $this->year;
     }
     public function isBefore (Date $date) : bool{
         $avant = $this->year < $date->year;
