@@ -27,6 +27,12 @@ final class Date{
     public function __toString():string{
         return $this->day .'/'. $this->month .'/'. $this->year;
     }
+    /**
+     * isBefore permet de savoir ci la date est av celle passer en parametre
+     *
+     * @param Date $date date a comparee
+     * @return boolean True ci la date est av Fasle sinon
+     */
     public function isBefore (Date $date) : bool{
         $avant = $this->year < $date->year;
         if(!$avant){
@@ -41,6 +47,12 @@ final class Date{
         }
     return $avant;
     }
+    /**
+     * isAfter permet de savoir ci la date est ap celle passer en parametre
+     *
+     * @param Date $date date a comparer
+     * @return boolean True ci la date est ap Fasle sinon
+     */
     public function isAfter (Date $date) : bool{
         return ! ($this == $date || $this->isBefore($date));
         }

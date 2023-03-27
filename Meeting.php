@@ -51,6 +51,13 @@ class Meeting extends Event{
         }
         return $desc . ' - '.$this->coordinator;
     }
+    /**
+     * coincide permet fde vois ci deux meeting sont de même d'ate et ci il sont tout deux de
+     * matiner ou non
+     *
+     * @param Event $meet l'evenement a comparer
+     * @return boolean True ci il se deroule en même temps, false sinon
+     */
     public function coincide(Event $meet): bool{
         $rep = False;
         if(get_class($meet) == 'Meeting'){

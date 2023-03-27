@@ -1,12 +1,12 @@
 <?php
 // Schneider Arthur
 declare(strict_types = 1);
-require_once"Date.php";
+require_once "Date.php";
 
 abstract class Event{
     private Date $date;
     /**
-     * __constructe est le constructeur de la classe Date, il crée et affecte une nouvelle date
+     * __constructe est le constructeur de la classe Event, il crée et affecte une nouvelle date
      * Event
      *
      * @param integer $j jour de l'event
